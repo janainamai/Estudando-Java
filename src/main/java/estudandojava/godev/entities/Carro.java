@@ -1,11 +1,14 @@
-package estudandojava.godev;
+package estudandojava.godev.entities;
 
 public class Carro {
 	private double motor;
 	private int nivelCombustivel;
 	private int velocidade;
 	private boolean isLigado;
-	
+
+	public Carro() {
+	}
+
 	public Carro(double motor, int nivelCombustivel, int velocidade, boolean isLigado) {
 		super();
 		this.motor = motor;
@@ -45,5 +48,5 @@ public class Carro {
 	public void setLigado(boolean isLigado) {
 		this.isLigado = isLigado;
 	}
-	
+
 }
