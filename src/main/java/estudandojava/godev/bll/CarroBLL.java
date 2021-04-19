@@ -3,7 +3,7 @@ package estudandojava.godev.bll;
 import estudandojava.godev.Common.Response;
 import estudandojava.godev.entities.Carro;
 
-public class CarroBLL {
+public class CarroBLL implements GasolinaInterface{
 	Carro carro = new Carro();
 	
 	public Response ligarCarro(Carro carro) {
