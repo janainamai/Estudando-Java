@@ -48,5 +48,7 @@ public class Carro {
 	public void setLigado(boolean isLigado) {
 		this.isLigado = isLigado;
 	}
+	
+	
 
 }

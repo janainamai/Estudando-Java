@@ -24,4 +24,8 @@ public class CarroBLL {
 		}
 			return response;
 	}
+	
+	public void abastecer(int quantidade) {
+		carro.setNivelCombustivel(quantidade);
+	}
 }
