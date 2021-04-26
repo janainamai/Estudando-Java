@@ -1,7 +1,8 @@
 package br.com.janaina.estudando.padraoDeProjeto.Bfactory;
 
-class DepartamentoContabil extends Departamento {
+class DepartamentoContabil extends FactoryDepartamento {
 	public void criarEmpregado(int id) {
-		this.criarEmpregado = new Contador(id);
+		Contador empregado = new Contador(id);
+		System.out.println("Novo empregado: contador " + empregado.getId());
 	}
 }

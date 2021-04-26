@@ -1,9 +1,12 @@
-package br.com.janaina.estudando.padraoDeProjeto.Bfactory;
+package br.com.janaina.estudando.padraoDeProjeto.Fdao;
 
-public class Programador extends Empregado {
+public class Pessoa {
 	private int id;
+	
+	public Pessoa() {
+	}
 
-	public Programador(int id) {
+	public Pessoa(int id) {
 		super();
 		this.id = id;
 	}
@@ -15,5 +18,6 @@ public class Programador extends Empregado {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	
 }

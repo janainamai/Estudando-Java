@@ -1,6 +1,6 @@
 package br.com.janaina.estudando.mvc.model;
 
-public class CasaDAO implements ICRUD<Casa> {
+public class CasaDAO implements IDAO<Casa> {
 
 	public void cadastrar(Casa objeto) {
 		// aqui ocorre contato com banco de dados para cadastrar uma casa

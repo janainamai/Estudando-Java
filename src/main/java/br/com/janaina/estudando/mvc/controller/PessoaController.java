@@ -1,10 +1,10 @@
 package br.com.janaina.estudando.mvc.controller;
 
-import br.com.janaina.estudando.mvc.model.ICRUD;
+import br.com.janaina.estudando.mvc.model.IDAO;
 import br.com.janaina.estudando.mvc.model.Pessoa;
 import br.com.janaina.estudando.mvc.model.PessoaDAO;
 
-public class PessoaController implements ICRUD<Pessoa> {
+public class PessoaController implements IDAO<Pessoa> {
 	PessoaDAO pessoaDAO = new PessoaDAO();
 	
 	public void cadastrar(Pessoa pessoa) {

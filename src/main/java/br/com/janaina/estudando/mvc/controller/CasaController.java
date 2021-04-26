@@ -1,13 +1,13 @@
 package br.com.janaina.estudando.mvc.controller;
 
 import br.com.janaina.estudando.mvc.model.Casa;
-import br.com.janaina.estudando.mvc.model.ICRUD;
+import br.com.janaina.estudando.mvc.model.IDAO;
 
-public class CasaController{
+public class CasaController implements ICasaController{
 	
-	ICRUD<Casa> casaDAO;
+	IDAO<Casa> casaDAO;
 	
-	public CasaController(ICRUD<Casa> casaDAO){
+	public CasaController(IDAO<Casa> casaDAO){
 		this.casaDAO = casaDAO;
 	}
 
@@ -19,5 +19,11 @@ public class CasaController{
 		Casa casa = casaDAO.pegarPorID(id);
 		return casa;
 	}
+
+	public void instalarAlarme(Casa casa) {
+		casa.setTemAlarme(true);		
+	}
+	
+	
 
 }

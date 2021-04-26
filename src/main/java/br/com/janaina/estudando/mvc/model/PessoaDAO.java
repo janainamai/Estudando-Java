@@ -1,6 +1,6 @@
 package br.com.janaina.estudando.mvc.model;
 
-public class PessoaDAO implements ICRUD<Pessoa> {
+public class PessoaDAO implements IDAO<Pessoa> {
 	public void cadastrar(Pessoa pessoa) {
 		// aqui ocorre contato com banco de dados para cadastrar a pessoa
 	}
