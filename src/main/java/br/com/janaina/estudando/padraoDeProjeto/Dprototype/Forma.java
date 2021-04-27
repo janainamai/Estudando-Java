@@ -1,44 +1,33 @@
 package br.com.janaina.estudando.padraoDeProjeto.Dprototype;
 
+import java.util.Objects;
+
 public abstract class Forma {
-	private int x;
-	private int y;
-	private String color;
+	public int x;
+	public int y;
+	public String color;
 	
 	public Forma() {}
 	
 	public Forma(Forma forma) {
 		if(forma != null) {
-			this.x = forma.getX();
-			this.y = forma.getY();
-			this.color = forma.getColor();
+			this.x = forma.x;
+			this.y = forma.y;
+			this.color = forma.color;
 		}
 	}
 	
 	public abstract Forma clone();
-
-	public int getX() {
-		return x;
+	
+	@Override
+	public boolean equals(Object object2) {
+		 if (!(object2 instanceof Forma)) return false;
+	        Forma forma2 = (Forma) object2;
+	        return forma2.x == x &&forma2.y == y && Objects.equals(forma2.color, color);
 	}
 
-	public void setX(int x) {
-		this.x = x;
-	}
 
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
+	
+	
 	
 }
