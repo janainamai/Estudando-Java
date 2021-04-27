@@ -5,12 +5,10 @@ import java.util.ArrayList;
 public class PessoaDAO implements IDAO<Pessoa> {
 
 	public ArrayList<Pessoa> getAll() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public Pessoa create(Pessoa item) {
-		
 		return null;
 	}
 
@@ -20,15 +18,10 @@ public class PessoaDAO implements IDAO<Pessoa> {
 	}
 
 	public boolean update(int id, Pessoa item) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	public boolean remove(int id) {
-		// TODO Auto-generated method stub
 		return false;
 	}
-	
-
-
 }
