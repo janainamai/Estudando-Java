@@ -1,10 +1,10 @@
-package br.com.janaina.devdojo.Jdatas;
+package br.com.janaina.devdojo.Klocale;
 
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class Dlocale {
+public class Alocale {
 	public static void main(String[] args) {
 
 		// setando países no Locale

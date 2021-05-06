@@ -1,8 +1,8 @@
-package br.com.janaina.devdojo.Jdatas;
+package br.com.janaina.devdojo.Klocale;
 
 import java.util.Locale;
 
-public class DlocaleISOs {
+public class AlocaleISOs {
 	public static void main(String[] args) {
 		String[] isoCountries = Locale.getISOCountries();
 		String[] isoLanguages = Locale.getISOLanguages();
