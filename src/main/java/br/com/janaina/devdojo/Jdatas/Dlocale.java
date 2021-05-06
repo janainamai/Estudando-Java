@@ -33,5 +33,10 @@ public class Dlocale {
 		
 		// definir no parâmetro a linguagem que queremos usar ao imprimir a informação
 		System.out.println(localeHolanda.getDisplayCountry(localeHolanda));
+		
+		System.out.println();
+		
+		// consultar linguagem do sistema do usuário
+		System.out.println(Locale.getDefault());
 	}
 }
