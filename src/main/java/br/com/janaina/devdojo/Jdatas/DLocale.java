@@ -14,6 +14,7 @@ public class DLocale {
 	DateFormat df2 = DateFormat.getDateInstance(DateFormat.FULL, localeItalia);
 	
 	System.out.println("Brasil : " + df1.format(calendar.getTime()));
+	System.out.println("Itália : " + df2.format(calendar.getTime()));
 	
 	}
 }
