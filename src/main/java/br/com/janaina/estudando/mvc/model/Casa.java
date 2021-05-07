@@ -1,25 +1,25 @@
 package br.com.janaina.estudando.mvc.model;
 
 public class Casa {
-	private String endereço;
+	private String endereco;
 	private int numero;
 	private boolean temAlarme;
 
 	public Casa() {
 	}
 
-	public Casa(String endereço, int numero, boolean temAlarme) {
-		this.endereço = endereço;
+	public Casa(String endereco, int numero, boolean temAlarme) {
+		this.endereco = endereco;
 		this.numero = numero;
 		this.temAlarme = temAlarme;
 	}
 
-	public String getEndereço() {
-		return endereço;
+	public String getendereco() {
+		return endereco;
 	}
 
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setendereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 	public int getNumero() {

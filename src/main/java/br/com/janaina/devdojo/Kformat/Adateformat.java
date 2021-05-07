@@ -1,9 +1,9 @@
-package br.com.janaina.devdojo.Jdatas;
+package br.com.janaina.devdojo.Kformat;
 
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class Cdateformat {
+public class Adateformat {
 	public static void main(String[] args) {
 		Calendar calendar = Calendar.getInstance(); 
 		DateFormat[] dateFormat = new DateFormat[7]; 
