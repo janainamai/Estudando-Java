@@ -13,14 +13,14 @@ public class Main {
 		Integer opcao = scanner.nextInt();
 		
 		if(opcao.equals(1)) {
-			//boneca = new Barbie();
+			boneca = new FactoryBarbie(); 
 		}
 		else if(opcao.equals(2)) {
-			//boneca = new Poly();
+			boneca = new FactoryPoly(); 
 		}
 		
 		System.out.println();
-	//	boneca.falar();
+		boneca.falarOla();
 		System.out.println();
 		
 	}
