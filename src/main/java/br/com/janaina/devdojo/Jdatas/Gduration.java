@@ -12,9 +12,11 @@ public class Gduration {
 	LocalTime timeMinutes7Hours = LocalTime.now().plusHours(7);
 	
 	Duration duration1 = Duration.between(now, nowAfterTwoYears); 
+	// saída: 17520 horas 
 	System.out.println(duration1);
 	
 	Duration duration2 = Duration.between(timeNow, timeMinutes7Hours);
+	// saída: 7 horas
 	System.out.println(duration2);
 	}
 }
