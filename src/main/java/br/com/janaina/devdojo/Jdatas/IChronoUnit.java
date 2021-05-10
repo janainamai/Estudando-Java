@@ -10,5 +10,8 @@ public class IChronoUnit {
 		LocalDateTime aniversario = LocalDateTime.of(1999, Month.DECEMBER, 7, 18, 45,0);
 		
 		ChronoUnit.DAYS.between(aniversario, LocalDateTime.now());
+		ChronoUnit.WEEKS.between(aniversario, LocalDateTime.now());
+		ChronoUnit.MONTHS.between(aniversario, LocalDateTime.now());
+		ChronoUnit.YEARS.between(aniversario, LocalDateTime.now());
 	}
 }
