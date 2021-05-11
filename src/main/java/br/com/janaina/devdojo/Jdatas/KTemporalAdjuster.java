@@ -7,6 +7,11 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAdjuster;
 
+/**
+ * Classe que me fornece qual será o próximo dia útil.
+ * @author janainamai
+ *
+ */
 class ObterProximoDiaUtil implements TemporalAdjuster {
 
 	@Override
@@ -34,8 +39,11 @@ public class KTemporalAdjuster {
 		LocalDate now = LocalDate.now();
 		System.out.println(now + " " + now.getDayOfWeek());
 		
-		// aa
+		now = LocalDate.now().with(new ObterProximoDiaUtil());
+		System.out.println(now.getDayOfWeek());
 		
+		now = LocalDate.now().withDayOfMonth(10).with(new ObterProximoDiaUtil());
+		System.out.println(now.getDayOfWeek());
 
 	}
 }
