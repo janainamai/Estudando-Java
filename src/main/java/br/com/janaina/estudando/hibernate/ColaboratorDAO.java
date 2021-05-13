@@ -4,8 +4,10 @@ import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 public class ColaboratorDAO {
 	
@@ -47,11 +49,21 @@ public class ColaboratorDAO {
 		session.getTransaction().commit();
 	}
 	
-	public List<Colaborator> getAll() {
+	public List<Colaborator> getAllWithCriteriaBuilder() {
 		CriteriaBuilder builder = session.getCriteriaBuilder();
 		CriteriaQuery<Colaborator> criteria = builder.createQuery(Colaborator.class);
-		criteria.from(Colaborator.class);
-		List<Colaborator> selectedCollaborators = session.createQuery(criteria).getResultList();
+		Query query = session.createQuery(criteria);
+		List<Colaborator> selectedCollaborators = query.getResultList();
 		return selectedCollaborators;
 	}
+	
+	public List<Colaborator> getAllWithCriteriaRoot() {
+		CriteriaBuilder builder = session.getCriteriaBuilder();
+		CriteriaQuery<Colaborator> criteria = builder.createQuery(Colaborator.class);
+		Root<Colaborator> root = criteria.from(Colaborator.class);
+		Query query = session.createQuery(criteria);
+		List<Colaborator> selectedCollaborators = query.getResultList();
+		return selectedCollaborators;
+	}
+	
 }
