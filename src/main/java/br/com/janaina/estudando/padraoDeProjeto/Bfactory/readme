@@ -1,5 +1,10 @@
-FactoryMethod: usado quando tenho diversos objetos com compportamentos semelhantes, uma factory para cada tipo de objeto onde ambos tem as mesmas funções
+FactoryMethod: usado quando tenho diversos objetos com comportamentos 
+semelhantes, criamos uma factory para cada tipo de objeto onde ambos tem as 
+mesmas funções
 
-Abstract Factory: quando temos dois objetos com comp dsemelhantes e algum tipo de variação onde essas variantes são iguais para os dois, 
-tipo tenho um sofá e uma cadeira, são coisas diferentes mas temos variantes em comum entre eles, exemplo: o material que pode ser couro ou algodão, 
-isso nos leva a ter uma factory de couro e uma de algodão, cada uma dessas factorys podem criar ambos os objetos porém em apenas uma variedade
+Abstract Factory: quando temos dois objetos com comportamentos semelhantes e 
+algum tipo de variação onde essas variantes são iguais para os dois, tipo tenho 
+um sofá e uma cadeira, são coisas diferentes mas temos variantes em comum entre 
+eles, exemplo: o material que pode ser couro ou algodão, isso nos leva a ter uma 
+factory de couro e uma de algodão, cada uma dessas factorys podem criar ambos 
+os objetos porém em apenas uma variedade
