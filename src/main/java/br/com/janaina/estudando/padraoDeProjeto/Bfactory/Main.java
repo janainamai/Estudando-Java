@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
-		FactoryBoneca boneca = null;
+		FactoryBoneca factoryBoneca = null;
 		
 		System.out.println("Qual boneca você deseja ouvir?\n1. Barbie\n2. Poly");
 		
@@ -13,14 +13,14 @@ public class Main {
 		Integer opcao = scanner.nextInt();
 		
 		if(opcao.equals(1)) {
-			boneca = new FactoryBarbie(); 
+			factoryBoneca = new FactoryBarbie(); 
 		}
 		else if(opcao.equals(2)) {
-			boneca = new FactoryPoly(); 
+			factoryBoneca = new FactoryPoly(); 
 		}
 		
 		System.out.println();
-		boneca.falarOla();
+		factoryBoneca.falarOla();
 		System.out.println();
 		
 	}
