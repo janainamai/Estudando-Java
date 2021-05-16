@@ -3,7 +3,7 @@ package br.com.janaina.devdojo.Mregex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Exercicio01 {
+public class PatternMatcher04 {
 	public static void main(String[] args) {
 		// vamos encontrar números hexadecimais no nosso texto
 		// números hexadecimais começam com 0x ou 0X, possuem números e letras de A-F
@@ -17,7 +17,6 @@ public class Exercicio01 {
 			System.out.println(matcher.start() + " " + matcher.group());
 		
 		//o problema é que ele não pegou o valor inteiro 0xFFABC, ele só pegou 0xF
-		
 		
 	}
 }
