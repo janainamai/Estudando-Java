@@ -7,15 +7,13 @@ public class Scanner01 {
 		String texto = "Janaina,Heloísa,true,Vicky,1807";
 		Scanner scanner = new Scanner(texto);
 		scanner.useDelimiter(",");
-		
-		while(scanner.hasNext()) {
-			if(scanner.hasNextInt()) {
+
+		while (scanner.hasNext()) {
+			if (scanner.hasNextInt()) {
 				int i = scanner.nextInt();
-			}
-			else if(scanner.hasNextBoolean()) {
+			} else if (scanner.hasNextBoolean()) {
 				boolean bool = scanner.nextBoolean();
-			}
-			else
+			} else
 				System.out.println(scanner.next());
 		}
 	}
