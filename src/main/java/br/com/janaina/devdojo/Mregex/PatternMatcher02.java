@@ -27,9 +27,5 @@ public class PatternMatcher02 {
 		//o comando abaixo irá me mostrar a posicao da string onde ele localizou o regex 'ab'
 		while(matcher.find())
 			System.out.println(matcher.start() + " " + matcher.group());
-		//ele encontrou 'ab' nas posicoes 0 e 3 do 'texto'
-		
-		//se o texto fosse abababa, ele responderia que encontrou nas posições 0 e 4, ignoraria a posicao 2
-		
 	}
 }
