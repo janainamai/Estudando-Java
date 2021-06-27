@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Path02 {
+public class Bbasic {
 
 	public static void main(String[] args) throws IOException {
 		// criando pasta

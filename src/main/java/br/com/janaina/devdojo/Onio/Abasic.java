@@ -3,7 +3,7 @@ package br.com.janaina.devdojo.Onio;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Path01 {
+public class Abasic {
 	
 	//Path: interface
 	//Paths: classe

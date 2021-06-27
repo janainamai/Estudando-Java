@@ -3,7 +3,7 @@ package br.com.janaina.devdojo.Onio;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Path04 {
+public class Drelativize {
 
 	public static void main(String[] args) {
 		//relativize 

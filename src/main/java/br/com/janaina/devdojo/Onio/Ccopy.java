@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Path03 {
+public class Ccopy {
 	public static void main(String[] args) throws IOException {
 		//copiando um arquivo existente e renomeando-o
 
