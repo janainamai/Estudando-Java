@@ -19,12 +19,12 @@ public class ISimpleFileVisitor {
 				// para definir esse comportamento, criaremos uma nova classe ListAllFiles
 		
 		Path root = Paths.get(".");
-		Files.walkFileTree(root, new ListAllFiles());
+		Files.walkFileTree(root, new ListAllJavaFiles());
 		
 	}
 }
 
-class ListAllFiles extends SimpleFileVisitor<Path> {
+class ListAllJavaFiles extends SimpleFileVisitor<Path> {
 
 	@Override
 	public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
