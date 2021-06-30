@@ -8,11 +8,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import br.com.janaina.devdojo.Qserialization.dominio.Aluno;
+import br.com.janaina.devdojo.Qserialization.dominio.Turma;
 
 public class test01 {
 	public static void main(String[] args) {
 		// criando um objeto
 		Aluno aluno = new Aluno(1L, "Janaina Mai", "admin");
+		Turma turma = new Turma("Java Core");
+		aluno.setTurma(turma);
 		
 		// salvando o estado deste objeto
 		serializar(aluno);
