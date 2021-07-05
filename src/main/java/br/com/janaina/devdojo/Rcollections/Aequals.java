@@ -4,30 +4,30 @@ public class Aequals {
 	public static void main(String[] args) {
 		// --------------------------- ENTENDENDO == E EQUALS
 		
-			// == utilizar para variáveis de tipo primitivo
-			// e para verificar se apontam para a mesma localização de memória 
+			// == utilizar para variï¿½veis de tipo primitivo
+			// e para verificar se apontam para a mesma localizaÃ§Ã£o de memÃ³ria 
 		
-			// equals() também verifica se as variáveis apontam para o mesmo objeto
-			// devemos sobrescrever o equals informando o atributo que deve ser único daquele objeto
-			// se utilizarmos um exemplo de objeto celular, cada um tem seu próprio serialNumber
+			// equals() tambÃ©m verifica se as variÃ¡veis apontam para o mesmo objeto
+			// devemos sobrescrever o equals informando o atributo que deve ser Ãºnico daquele objeto
+			// se utilizarmos um exemplo de objeto celular, cada um tem seu prÃ³prio serialNumber
 		
 			int idade = 21;
 			int idade2 = 21;
 			System.out.println(idade == idade2);
 			// retorno: true
-			// comparou o valor das variáveis
+			// comparou o valor das variÃ¡veis
 		
 			String sobrenome = "Mai";
 			String sobrenome2 = new String("Mai");
 			System.out.println(sobrenome == sobrenome2);
 			// retorno: false
-			// comparou o endereço de referência das variáveis
+			// comparou o endereÃ§o de referÃªncia das variÃ¡veis
 		
 			CelularSemEquals celular1 = new CelularSemEquals("A123", "Motorola");
 			CelularSemEquals celular2 = new CelularSemEquals("A123", "Motorola");
 			System.out.println(celular1.equals(celular2));
 			// retorno: false
-			// comparou se as variáveis apontam para o mesmo endereço de memória
+			// comparou se as variÃ¡veis apontam para o mesmo endereÃ§oo de memÃ³ria
 			// para o retorno ser true, precisamos configurar o equals
 		
 		// --------------------------- TESTANDO COM EQUALS CONFIGURADO
@@ -37,7 +37,7 @@ public class Aequals {
 }
 
 /**
- * Classe sem método equals sobrescrito.
+ * Classe sem mï¿½todo equals sobrescrito.
  */
 class CelularSemEquals {
 	private String serialNumber;
@@ -51,9 +51,28 @@ class CelularSemEquals {
 }
 
 /**
- * Classe com método equals sobrescrito.
+ * Classe com mï¿½todo equals sobrescrito.
  */
 class CelularComEquals {
 	private String serialNumber;
 	private String marca;
+	
+	/**
+	 * De acordo com a documentaÃ§Ã£o do Java sobre equals, ele precisa ser:
+	 * Reflexivo: x.equals(x) tem que ser true para tudo que for diferente de null
+	 * SimÃ©trico: para x e y diferentes de null, se x.equals(y) == true, logo, y.equals(x) precisa ser == true
+	 * Transitividade: para x, y, z diferentes de null, se x.equals(y) == true e x.equals(z) == true, logo, y.equals(z) precisa ser == true
+	 * Consistente: x.equals(x) sempre retorna true se x for diferente de null
+	 * para x diferente de null, x.equals(null) tem que retornar false
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) return false;
+		if(this == obj) return true;
+		if(this.getClass() != obj.getClass()) return false;
+		CelularComEquals celular = (CelularComEquals) obj;
+		return serialNumber != null && serialNumber.equals(celular.serialNumber);
+	}
+	
+	
 }
