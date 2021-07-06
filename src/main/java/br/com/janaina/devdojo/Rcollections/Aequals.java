@@ -4,12 +4,12 @@ public class Aequals {
 	public static void main(String[] args) {
 		// --------------------------- ENTENDENDO == E EQUALS
 		
-			// == utilizar para vari�veis de tipo primitivo
+			// == utilizar para variáveis de tipo primitivo
 			// e para verificar se apontam para a mesma localização de memória 
 		
 			// equals() também verifica se as variáveis apontam para o mesmo objeto
-			// devemos sobrescrever o equals informando o atributo que deve ser único daquele objeto
-			// se utilizarmos um exemplo de objeto celular, cada um tem seu próprio serialNumber
+		
+			// resultados utilizando == e equals sem configurar o equals
 		
 			int idade = 21;
 			int idade2 = 21;
@@ -31,13 +31,20 @@ public class Aequals {
 			// para o retorno ser true, precisamos configurar o equals
 		
 		// --------------------------- TESTANDO COM EQUALS CONFIGURADO
+			
+			// devemos sobrescrever o equals informando o atributo que deve ser único daquele objeto
+			// se utilizarmos um exemplo de objeto celular, cada um tem seu próprio serialNumber
 		
-		
+			CelularComEquals celular3 = new CelularComEquals("A123", "Motorola");
+			CelularComEquals celular4 = new CelularComEquals ("A123", "Xiaomi");
+			System.out.println(celular1.equals(celular2));
+			// retorno: true
+			// pois configuramos para verificar se o serialNumber era igual
 	}
 }
 
 /**
- * Classe sem m�todo equals sobrescrito.
+ * Classe sem método equals sobrescrito.
  */
 class CelularSemEquals {
 	private String serialNumber;
@@ -51,11 +58,16 @@ class CelularSemEquals {
 }
 
 /**
- * Classe com m�todo equals sobrescrito.
+ * Classe com método equals sobrescrito.
  */
 class CelularComEquals {
 	private String serialNumber;
 	private String marca;
+	
+	public CelularComEquals(String serialNumber, String marca) {
+		this.serialNumber = serialNumber;
+		this.marca = marca;
+	}
 	
 	/**
 	 * De acordo com a documentação do Java sobre equals, ele precisa ser:
