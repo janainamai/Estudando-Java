@@ -15,7 +15,7 @@ class RandomNumberCallable implements Callable<String> {
 		for (int i = 0; i < count; i++) {
 			System.out.printf("%s executando callable%n", Thread.currentThread().getName());
 		}
-		return String.format("%s finalizou, n�mero: %d", Thread.currentThread(), count);
+		return String.format("%s finalizou, número: %d", Thread.currentThread(), count);
 	}
 }
 
