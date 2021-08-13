@@ -9,7 +9,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
+/**
+ * Classe colaborador.
+ * @author Janaina
+ *
+ */
 @Entity
 public class Colaborator {
 	
