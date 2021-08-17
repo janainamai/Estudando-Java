@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public final class Airplane {
+	private String name;
 	private final Set<String> availableSeats = new HashSet<>();
 	
 	{
@@ -11,8 +12,16 @@ public final class Airplane {
 		availableSeats.add("1B");
 	}
 	
+	public Airplane(String name) {
+		this.name = name;
+	}
+
 	public boolean buySeat(String seat) {
 		return availableSeats.remove(seat);
 	}
-	
+
+	public String getName() {
+		return name;
+	}
+
 }

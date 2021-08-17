@@ -9,7 +9,7 @@ public class AirplaneTest01 {
 	}
 	
 	private static void buySeat(String seat) {
-		Airplane airplane = new Airplane(); 
+		Airplane airplane = new Airplane("777"); 
 		System.out.println(airplane.buySeat(seat));
 	}
 }
