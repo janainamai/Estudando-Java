@@ -14,5 +14,4 @@ import lombok.Value;
 public class Publisher {
 	Integer id;
 	String name;
-
 }
