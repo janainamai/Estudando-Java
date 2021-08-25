@@ -11,6 +11,10 @@ public class PublisherService {
 		PublisherRepository.save(publisher);
 	}
 	
+	public static void saveTransaction(List<Publisher> publishers) {
+		PublisherRepository.saveTransaction(publishers);
+	}
+	
 	public static void delete(Integer id) {
 		validateId(id);
 		PublisherRepository.delete(id);
@@ -23,6 +27,37 @@ public class PublisherService {
 	
 	public static List<Publisher> findAll() {
 		List<Publisher> publishers = PublisherRepository.findAll();
+		return publishers;
+	}
+	
+	public static List<Publisher> findByName(String name) {
+		List<Publisher> publishers = PublisherRepository.findByName(name);
+		return publishers;
+	}
+	
+	public static List<Publisher> findByNamePreparedStatement(String name) {
+		List<Publisher> publishers = PublisherRepository.findByName(name);
+		return publishers;
+	}
+	
+	public static void showDriverMetaData() {
+		PublisherRepository.showDriverMetaData();
+	}
+	
+	public static void showPublisherMetaData() {
+		PublisherRepository.showPublisherMetaData();
+	}
+	
+	public static void showTypeScrollWorking() {
+		PublisherRepository.showTypeScrollWorking();
+	}
+	
+	public static void findByNameAndUpdateToUpperCase(String name) {
+		PublisherRepository.findByNameAndUpdateToUpperCase(name);
+	}
+	
+	public static List<Publisher> findByNameAndInsertWhenNotFound(String name) {
+		List<Publisher> publishers = PublisherRepository.findByNameAndInsertWhenNotFound(name);
 		return publishers;
 	}
 	
